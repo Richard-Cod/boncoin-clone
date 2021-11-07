@@ -47,7 +47,7 @@ function Category({name , image}) {
   return (
     <div style={{
     }} className="mr-2 relative rounded-lg">
-      <img className="h-32 min-w-[200px] rounded-lg" src={image} />
+      <img className="h-32 min-w-[150px]  rounded-lg" src={image} />
 
       <div 
       style={{
@@ -62,13 +62,16 @@ function Category({name , image}) {
 
 function FeaturedCategories() {
   return (
-    <div className="px-8">
-    <h2 className="text-3xl mb-4">Top catégories</h2>
+    <div className="px-8 mt-4 max-w-4xl mx-auto">
+    <h2 className="text-2xl mb-4">Top catégories</h2>
 
-    <div className="flex overflow-x-scroll max-w-4xl overflow-y-hidden">
+    <div style={{
+      boxShadow : "10px 0 5px -2px #C6C5C5"
+    }} className="flex overflow-x-scroll max-w-4xl overflow-y-hidden">
       {featuredCategoriesData.map((value) => <Category name={value.name} image={value.image} />)}
     </div>
 
+          
   </div>
   )
 }

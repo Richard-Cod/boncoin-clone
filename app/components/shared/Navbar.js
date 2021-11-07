@@ -57,8 +57,8 @@ function NavBar() {
                 <div className="cursor-pointer flex ">
                   <img src="/logo.png" className="h-10 mr-3" />
 
-                <button className="hidden md:flex font-bold text-white bg-green-900 px-2 py-1 rounded-md flex items-center mr-2"> <PlusCircleIcon className="w-5 h-5 mr-2" />  Déposer une annonce</button>
-                <button className="hidden md:flex font-bold  px-2 py-1 rounded-md flex items-center"> <SearchIcon className="w-5 h-5 mr-2" />  Rechercher</button>
+                <button className="hidden md:flex font-bold text-white bg-green-900 px-2 text-sm rounded-md flex items-center mr-2"> <PlusCircleIcon className="w-5 h-5 mr-2" />  Déposer une annonce</button>
+                <button className="hidden md:flex font-bold  px-2 py-1 rounded-md flex items-center text-sm"> <SearchIcon className="w-5 h-5 mr-2" />  Rechercher</button>
                 </div>
             </Link>
             <div className="menu  ml-auto  max-w-[400px]">

@@ -36,8 +36,13 @@ label.cradio > input[type="radio"]:checked + *::before {
   stroke: white;
   stroke-opacity: 1;
   stroke-width: 0.5;
+  cursor: pointer;
 }
 
 .land:hover {
   fill: red;
+}
+
+body {
+  overflow-x: hidden;
 }
