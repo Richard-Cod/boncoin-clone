@@ -1,7 +1,7 @@
 import React, { useState  } from 'react'
 import DatePicker from "react-datepicker";
 
-import Link from 'next/Link'
+import Link from 'next/link'
 import registerBrain from '../../brain/registerBrain';
 import { KRoutes } from '../../constants/KRoutes';
 import StateFulButton from '../shared/StateFulButton';
