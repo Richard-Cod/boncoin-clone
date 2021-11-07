@@ -1,0 +1,43 @@
+/**
+ *
+ * @format
+ */
+
+label.cradio > input[type="radio"] {
+  display: none;
+}
+label.cradio > input[type="radio"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+}
+label.cradio > input[type="radio"]:checked + * {
+  color: teal;
+}
+label.cradio > input[type="radio"]:checked + *::before {
+  background: radial-gradient(teal 0%, teal 40%, transparent 50%, transparent);
+  border-color: teal;
+}
+
+/* body {
+  background-image: url("https://images.pexels.com/photos/2292953/pexels-photo-2292953.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+} */
+
+.land {
+  fill: #cccccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+}
+
+.land:hover {
+  fill: red;
+}
