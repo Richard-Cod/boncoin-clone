@@ -3,7 +3,7 @@ import React from 'react'
 import {MenuIcon } from '@heroicons/react/solid'
 import { HeartIcon , BellIcon , ChatIcon , UserIcon , PlusCircleIcon , SearchIcon } from '@heroicons/react/outline'
 import manageJwtToken from '../../utils/manageJwtToken'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { KRoutes } from '../../constants/KRoutes'
 
 

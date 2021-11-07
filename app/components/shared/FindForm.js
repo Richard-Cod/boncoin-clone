@@ -2,7 +2,8 @@ import React from 'react'
 
 import {ChevronDownIcon, MenuIcon, XCircleIcon } from '@heroicons/react/solid'
 import { HeartIcon , BellIcon , ChatIcon , UserIcon , PlusCircleIcon , SearchIcon  , LocationMarkerIcon} from '@heroicons/react/outline'
-import Link from 'next/Link'
+import Link from 'next/link'
+
 import { KRoutes } from '../../constants/KRoutes'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
