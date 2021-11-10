@@ -40,7 +40,7 @@ function LikeDislikeButton({post , propUser , setpost}) {
                     style={{
                         color : isLiked() ? "red" : "black"
                     }}
-                     className="h-5 w-5 mr-1 hover:text-red-700 rounded-lg" /> Like
+                     className="h-5 w-5 mr-1 hover:text-green-700 rounded-lg" /> Like
             </button>
     )
 }

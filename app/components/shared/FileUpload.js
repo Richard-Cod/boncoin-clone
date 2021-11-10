@@ -35,7 +35,7 @@ function FileUpload({type , title , ...props}) {
     <div {...props}>
             {fileName || ""}
         <label className="cursor-pointer " htmlFor={type}>
-            <PhotographIcon className="w-5 h-w-5 text-white-900  hover:text-red-700" />
+            <PhotographIcon className="w-5 h-w-5 text-white-900  hover:text-green-700" />
         </label>
       <input className="hidden" id={type} type="file" onChange={saveFile} />
      </div>

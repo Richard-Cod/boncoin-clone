@@ -1,11 +1,11 @@
 import React from 'react'
 
 import {ChevronDownIcon, MenuIcon, XCircleIcon } from '@heroicons/react/solid'
-import { HeartIcon , BellIcon , ChatIcon , UserIcon , PlusCircleIcon , SearchIcon  , LocationMarkerIcon} from '@heroicons/react/outline'
+import { PlusCircleIcon , SearchIcon  , LocationMarkerIcon} from '@heroicons/react/outline'
 import Link from 'next/link'
 
 import { KRoutes } from '../../constants/KRoutes'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import CategoriesDrawer from './CategoriesDrawer'
 
 
  function DesktopForm() {
@@ -20,7 +20,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
           <label className="cradio">
               <input type="radio" name="radio-button" value="no" />
               <span className="text-xs">Demandes</span>
-
           </label>
 
         </div>
@@ -28,14 +27,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
         <div className="mt-4 flex">
             <ChooseCategory/>
-
             <SearchInput />
             <CityInput />
-
-           
-
-            
-
         </div>
 
         <PriceFilterItem />
@@ -62,16 +55,8 @@ function CityInput() {
 }
 
 
- function ChooseCategory() {
-    return (
-            <div className="bg-[#F4F6F7] flex justify-between items-center px-4 py-2 border-r-2 cursor-pointer ">
-                <MenuIcon className="h-5 mr-2" />
-                <span className="text-sm md:hidden">Choisissez votre catégorie</span>
-                <span className="text-sm hidden md:block">Catégories</span>
-                <ChevronDownIcon className="h-7 text-gray-400" />
-            </div>
-    )
-}
+
+const ChooseCategory = () => <CategoriesDrawer />
 
 function PlaceFilterItem({name}) {
     return (
@@ -95,15 +80,16 @@ function PriceFilterItem() {
  function MobileForm() {
     return (
   
-            <div style={{boxShadow : "1px 1px 4px #eee"}} className="px-5 md:hidden md:border-2 border-gray-200 py-4 max-w-4xl mx-auto">
+            <div style={{boxShadow : "1px 1px 4px #eee"}} 
+            className="px-5 md:hidden md:border-2 border-gray-200 py-4 max-w-4xl mx-auto">
 
-            <ChooseCategory />
-            <div className="my-3"></div>
-            <SearchInput />
+                 <CategoriesDrawer />
+                <div className="my-3"></div>
+                <SearchInput />
 
-            <div className="mt-2">
-                <PlaceFilterItem  name="Toute la France"/>   
-            </div>
+                <div className="mt-2">
+                    <PlaceFilterItem  name="Toute la France"/>   
+                </div>
 
             </div>
   

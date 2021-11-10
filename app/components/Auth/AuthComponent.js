@@ -50,9 +50,9 @@ function Footer({type = AuthTypes.signup}) {
                         
                         {type == AuthTypes.signup ?  
                     
-                    <span> Already have an account ? <span className="text-red-900">  Log in </span> </span> :
+                    <span> Already have an account ? <span className="text-green-900">  Log in </span> </span> :
 
-                     <span> Don't have an account ? <span className="text-red-900"> Register </span> </span>
+                     <span> Don't have an account ? <span className="text-green-900"> Register </span> </span>
                      
                      }
                      
@@ -103,7 +103,7 @@ function Form({type}) {
 
                 <div>
                     <label className="flex uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            <CakeIcon className="h-5 w-h-5 text-red-900 mr-2" />  Birthdate 
+                            <CakeIcon className="h-5 w-h-5 text-green-900 mr-2" />  Birthdate 
                     </label>
                     <div className="relative">
                         <DatePicker

@@ -56,6 +56,7 @@ function Category({name , image}) {
       className="absolute bottom-0 py-1 w-full text-center rounded-b-lg ">
         <p className="text-white font-bold text-sm "> {name} </p>
       </div>
+
     </div>
   )
 }

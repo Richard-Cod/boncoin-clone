@@ -14,7 +14,7 @@ function FileInput({htmlFor , textLabel ,saveFile , multiple = false , ...props}
   return (
     <div {...props}>
         <label className="cursor-pointer flex " htmlFor={htmlFor}>
-            <PhotographIcon className="w-5 h-w-5 mr-2 text-white-900  hover:text-red-700" />
+            <PhotographIcon className="w-5 h-w-5 mr-2 text-white-900  hover:text-green-700" />
             {textLabel}
         </label>
       <input className="hidden" id={htmlFor} type="file" accept="image/*" multiple={multiple} onChange={saveFile} />
