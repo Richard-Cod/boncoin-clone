@@ -1,7 +1,9 @@
 import {ArrowLeftIcon, BriefcaseIcon, ChevronDownIcon, MenuIcon, SunIcon, TruckIcon } from '@heroicons/react/solid'
+import { connect } from 'react-redux'
+import { setCategoryTitle } from '../../redux/actions/homeActions'
 import Drawer , {  DrawerList } from './Drawer'
 
-function CategoriesDrawer() {
+function CategoriesDrawer({categoryTitle}) {
     const categoriesList = [
         {title : "Toutes catégories" , LeftIcon : MenuIcon  },
         {title : "Vacances" , LeftIcon : SunIcon  },
@@ -14,7 +16,7 @@ function CategoriesDrawer() {
         <MenuIcon className="h-5 mr-2" />
         
         <span className="text-sm  md:hidden ">Choisissez votre catégories</span>
-        <span className="text-sm hidden md:block ">catégories</span>
+        <span className="text-sm hidden md:block ">{categoryTitle}</span>
         <ChevronDownIcon className="h-7 text-gray-400" />
 
     </div>
@@ -33,5 +35,15 @@ function CategoriesDrawer() {
                 </Drawer>
     )
 }
+
+const mapStateToProps = state => ({
+    categoryTitle: state.home.categoryTitle
+});
+
+const mapDispatchToProps = {
+    setCategoryTitle
+};
+
+CategoriesDrawer = connect(mapStateToProps, mapDispatchToProps)(CategoriesDrawer)
 
 export default CategoriesDrawer

@@ -11,6 +11,25 @@ import loginBrain from '../../brain/loginBrain';
 import CInput from '../shared/CInput';
 import { CakeIcon } from '@heroicons/react/solid';
 
+
+function TopHeader({type = AuthTypes.signin}) {
+    return (
+        <div className="border-2">
+
+            <div className="mx-auto w-32 flex items-center">
+             <img src="/logo.png" className="h-10 pr-2 border-r-[1px] mr-4 border-green-400" />
+             <vr/>
+             <h1 className="text-lg font-semibold text-green-400">
+             {type === AuthTypes.signin ? "Connexion" : "Inscription" }
+             </h1>
+            
+            </div>
+            
+        </div>
+    )
+}
+
+
 function OrSignWithCredentials({type = AuthTypes.signin}) {
     return (
         <div className="text-blueGray-400 text-center mb-3 font-bold">
@@ -78,6 +97,7 @@ function Form({type}) {
 
     return (
         <form 
+        className="z-50"
         // onSubmit={(e) => {
         //     e.preventDefault()
         //     console.log("submit")
@@ -97,7 +117,7 @@ function Form({type}) {
                 <CInput className="mr-2" label="Password" type="password" value={password} placeholder="password" setValue={setPassword} />
                 {type == AuthTypes.signup  && <CInput label="Password Confirmation" type="password" value={passwordConfirmation} placeholder="password confirmation" setValue={setPasswordConfirmation} />}
             </div>
-            {type == AuthTypes.signup && 
+            {/* {type == AuthTypes.signup && 
 
             <div className="relative mb-3 flex justify-around">
 
@@ -136,7 +156,7 @@ function Form({type}) {
                         </div>
                     </div>
                 </div>
-            </div>}
+            </div>} */}
 
             <AgreeWithPolicy />
             <StateFulButton 
@@ -153,11 +173,14 @@ function Form({type}) {
 
 function AuthComponent({type}) {
     return (
-            <div className="text-center">
-                <div className="mx-auto mt-4" >
-                    <section className=" bg-blueGray-50">
-                        <div className="w-full lg:w-6/12 px-4 mx-auto pt-6">
-                            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
+            <div 
+            className="text-center">
+               
+                    <TopHeader type={type} />
+                <div className="mx-auto mt-4  relative " >
+                    <section className="bg-blueGray-50 z-50">
+                        <div className="w-full md:w-6/12 px-4 mx-auto pt-6 bg-white">
+                            <div className=" flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
                                     <AuthTop type={type} />
                                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                                     <OrSignWithCredentials type={type} />
@@ -166,6 +189,18 @@ function AuthComponent({type}) {
                             </div>
                         </div>
                     </section>
+                     <div className="h-96 relative z-[-1] w-full  hidden md:block" 
+                     style={{
+                        backgroundImage : "url('/illus3.svg')",
+                        backgroundRepeat : "no-repeat",
+                        backgroundSize  : "100%",
+                        marginTop : -300
+                    }}
+                    >
+
+                        {/* <img src="/illus2.svg" className="h-96 w-full" /> */}
+
+                </div>
                 </div>
             </div>
     )

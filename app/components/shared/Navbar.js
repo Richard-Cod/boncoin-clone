@@ -71,7 +71,10 @@ function NavBar() {
                     <li className={listCLasses}> <BellIcon className="h-7" /> Mes recherches</li>
                     <li className={listCLasses}> <HeartIcon className="h-7" /> Favoris</li>
                     <li className={listCLasses}> <ChatIcon className="h-7" /> Messages</li>
-                    <li className={listCLasses}> <UserIcon className="h-7" /> Se connecter</li>
+                    <a href={KRoutes.login}> <li className={listCLasses}> <UserIcon className="h-7" /> 
+                        Se connecter
+                    </li>
+                    </a>
                 </ul>
 
                 <MobileButtonNav />
