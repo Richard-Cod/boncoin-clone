@@ -6,6 +6,7 @@ const KRoutes = {
     registerPart : "/account/register/part",
     registerPro : "/account/register/pro",
     verifyemailVerify : (code) =>  `/verifyemail/verify/${code}`,
+    offresCity : (city) =>  `/annonces/offres/${city}`,
     verifyemailSend : `/verifyemail/send/`,
 }
 
