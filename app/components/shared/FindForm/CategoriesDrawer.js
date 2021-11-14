@@ -1,7 +1,7 @@
 import {ArrowLeftIcon, BriefcaseIcon, ChevronDownIcon, MenuIcon, SunIcon, TruckIcon } from '@heroicons/react/solid'
 import { connect } from 'react-redux'
-import { setCategoryTitle } from '../../redux/actions/homeActions'
-import Drawer , {  DrawerList } from './Drawer'
+import { setCategoryTitle } from '../../../redux/actions/homeActions'
+import Drawer , {  DrawerList } from '../Drawer'
 
 function CategoriesDrawer({categoryTitle}) {
     const categoriesList = [

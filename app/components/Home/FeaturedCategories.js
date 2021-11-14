@@ -1,9 +1,11 @@
 import { useState , useEffect } from "react"
 import homeBrain from "../../brain/homeBrain"
+import { KRoutes } from "../../constants/KRoutes"
 
   function Category({name , image}) {
     return (
-      <div style={{
+      <a href={KRoutes.categoryOffer(name)}>
+        <div style={{
       }} className="mr-2 relative rounded-lg">
         <img className="h-32 min-w-[150px]  rounded-lg" src={image} />
   
@@ -16,6 +18,7 @@ import homeBrain from "../../brain/homeBrain"
         </div>
   
       </div>
+      </a>
     )
   }
   

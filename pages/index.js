@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { connect } from 'react-redux'
-import FindForm from '../app/components/shared/FindForm'
+import FindForm from '../app/components/shared/FindForm/FindForm'
 import PagesLayout from '../app/layout/PagesLayout'
 
 import BurkinaMap from '../app/components/BurkinaMap'
