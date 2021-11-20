@@ -37,7 +37,7 @@ export default {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
               resolve(featuredCategoriesData);
-            }, 3000);
+            }, 3100);
           });
     }
 }
